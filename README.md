@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Product-list-with-cart](https://www.frontendmentor.io/challenges/)
+- Solution URL: [Product-list-with-cart](https://www.frontendmentor.io/solutions/product-list-with-cart-mN6Zr1n5Ux)
 - Live Site URL: [Product-list-with-cart](https://shanmukh-19.github.io/Product-list-with-cart/)
 
 ## My process
