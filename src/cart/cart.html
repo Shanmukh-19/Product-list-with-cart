@@ -1,0 +1,29 @@
+<h2>Your Cart({{ totalItems }})</h2>
+<div *ngIf="!(cartItems?.length) else cartContent" class="cart">
+    <img src="illustration-empty-cart.svg" alt="cart-empty">
+    <h3>Your added items will appear here</h3>
+</div>
+<ng-template #cartContent>
+    <div *ngFor="let item of cartItems" class = "cart-item">
+        <div>
+            <h4>{{ item.name }}</h4>
+            <span style="color: red">{{ item.quantity }}x </span>
+            <span>@{{ item.price | currency }}</span>
+            <span><b>{{ item.quantity * item.price | currency }}</b></span>
+        </div>
+        <div>
+            <button (click)="removeFromCart(item)">
+                <img src="icon-remove-item.svg" alt="remove-icon">
+            </button>
+        </div>
+    </div>
+    <div class="total">
+        <span>Order Total:</span>
+        <span><b>{{ total | currency }}</b></span>
+    </div>
+    <div class="carbon-neutral">
+        <img src="icon-carbon-neutral.svg" alt="carbon">
+        <p>This is a <strong>carbon-neutral</strong> delivery</p>
+    </div>
+    <button (click)="confirmOrder()" class="confirm-order">Confirm Order</button>
+</ng-template>

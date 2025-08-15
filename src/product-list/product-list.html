@@ -1,0 +1,26 @@
+<h1>Desserts</h1>
+<div class="product-list">
+  <div *ngFor="let product of productList" class="product-item">
+    <div class="product-img">
+      <img [src]="product.image.desktop" alt="{{ product.name }}" />
+      <div class="add-to-cart-button" *ngIf="product?.quantity === 0">
+        <button (click)="addToCart(product)">
+          <img src="icon-add-to-cart.svg" alt="cart-icon" />
+          <span>Add to Cart</span>
+        </button>
+        </div>
+        <div *ngIf="product?.quantity > 0" class="quantity-selector">
+            <button (click)="decrement(product)">
+                <img src="icon-decrement-quantity.svg" alt="-" />
+            </button>
+            <span>{{ product?.quantity }}</span>
+            <button (click)="increment(product)">
+                <img src="icon-increment-quantity.svg" alt="+" />
+            </button>
+        </div>
+    </div>
+    <p class="category">{{ product.category }}</p>
+    <h2>{{ product.name }}</h2>
+    <p class="price">{{ product.price | currency }}</p>
+  </div>
+</div>

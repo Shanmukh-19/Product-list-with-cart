@@ -1,0 +1,29 @@
+<div class="order-container">
+    <img src="icon-order-confirmed.svg" alt="confirmed" class="order-tick">
+    <H1>Order Confirmed</H1>
+    <p>We hope you enjoy your food!</p>
+    <div class="order-details">
+        <div *ngFor="let item of cartItems">
+            <div class="order-item">
+                <div class="order-item-details">
+                    <div class="order-item-image">
+                        <img [src]="item.image.desktop" alt="{{ item.name }}" class="order-tick">
+                    </div>
+                    <div class="order-item-info">
+                        <div>{{ item.name }}</div>
+                        <span>{{ item.quantity }}x</span>
+                        <span>@ {{ item.price | currency }}</span>
+                    </div>
+                </div>
+                <div class="order-item-total">{{ item.quantity * item.price | currency }}</div>
+            </div>
+        </div>
+        <div class="total">
+            <div>Order Total:</div>
+            <div> {{ total | currency }}</div>
+        </div>
+    </div>
+    <button class="start-new-order" (click)="startNewOrder()">
+        Start New Order
+    </button>
+</div>

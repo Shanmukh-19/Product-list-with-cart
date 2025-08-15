@@ -1,0 +1,82 @@
+.order-tick{
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+h1{
+    margin-bottom: 0;
+}
+body{
+    padding: 20px;
+}
+.order-item{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.order-item-details{
+    display: flex;
+    align-items: center;
+}
+.order-item-image{
+    margin-right: 10px;
+}
+.order-item-info span{
+    margin-right: 5px;
+    font-size: 12px;
+}
+.order-item-info div{
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.order-item-info :nth-child(2){
+    color: red;
+}
+.order-item-total{
+    font-weight: bold;
+    font-size: 16px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.start-new-order{
+    background-color: rgb(146, 21, 21);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.order-details{
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    background-color: antiquewhite;
+}
+.total :first-child{
+    font-size: 12px;
+}
+.total :nth-child(2){
+    font-size: 16px;
+    font-weight: bold;
+}
+p{
+    font-size: 12px;
+}
+.order-container {
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
